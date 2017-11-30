@@ -3,4 +3,5 @@
     <string name="expenses">Despesas</string>
     <string name="new_expense">Nova</string>
     <string name="history">Histórico</string>
+    <string name="dummy_section_text">Section %1d is just a dummy section.</string>
 </resources>
