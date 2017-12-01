@@ -8,11 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter
 class CustomFragmentStatePagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getItem(i: Int): Fragment {
-        val fragment = ExpensesFragment()
-        val args = Bundle()
-        args.putInt(ExpensesFragment.ARG_SECTION_NUMBER, i + 1)
-        fragment.arguments = args
-        return fragment
+        return NewExpenseFragment()
     }
 
     override fun getCount(): Int {

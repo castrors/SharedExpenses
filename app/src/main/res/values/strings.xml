@@ -4,4 +4,8 @@
     <string name="new_expense">Nova</string>
     <string name="history">Histórico</string>
     <string name="dummy_section_text">Section %1d is just a dummy section.</string>
+    <string name="title">Titulo</string>
+    <string name="house_expenses">Despesas de casa</string>
+    <string name="contact">Contato</string>
+    <string name="save">Salvar</string>
 </resources>
