@@ -1,9 +1,5 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-kapt'
-
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -28,17 +24,24 @@ android {
     }
 }
 
-
+kapt {
+    generateStubs = true
+}
 
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$support_lib_version"
     implementation "com.android.support:design:$support_lib_version"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile "android.arch.persistence.room:runtime:1.0.0"
-    kapt "android.arch.persistence.room:compiler:1.0.0"
+
+    implementation "android.arch.lifecycle:runtime:1.0.3"
+    kapt "android.arch.lifecycle:compiler:$arch_comp_version"
+    implementation "android.arch.lifecycle:extensions:$arch_comp_version"
+    implementation "android.arch.persistence.room:runtime:$arch_comp_version"
+    implementation "android.arch.persistence.room:rxjava2:$arch_comp_version"
+    kapt "android.arch.persistence.room:compiler:$arch_comp_version"
 
     testImplementation 'junit:junit:4.12'
 

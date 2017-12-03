@@ -8,9 +8,6 @@ interface ExpenseDao {
     @Query("SELECT * FROM Expenses")
     fun getAllExpenses(): List<Expense>
 
-    @Query("SELECT * FROM Expenses WHERE id = :id")
-    fun findExpenseById(id: Long): Expense
-
     @Insert(onConflict = REPLACE)
     fun insertExpense(expense: Expense)
 

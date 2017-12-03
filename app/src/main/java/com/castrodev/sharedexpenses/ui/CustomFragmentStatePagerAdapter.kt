@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter
 class CustomFragmentStatePagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getItem(i: Int): Fragment {
-        return NewExpenseFragment()
+        return ExpenseFormFragment()
     }
 
     override fun getCount(): Int {
