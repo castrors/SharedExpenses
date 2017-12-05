@@ -6,15 +6,17 @@ import android.support.v4.app.FragmentPagerAdapter
 
 class CustomFragmentStatePagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
-    override fun getItem(i: Int): Fragment {
-        return ExpenseFormFragment()
+    override fun getItem(index: Int): Fragment {
+        return when (index) {
+            0 -> ExpenseListFragment()
+            1 -> ExpenseFormFragment()
+            2 -> ExpenseFormFragment()
+            else ->
+                throw RuntimeException("Unexpected index")
+        }
     }
 
     override fun getCount(): Int {
         return 3
-    }
-
-    override fun getPageTitle(position: Int): CharSequence {
-        return "Section " + (position + 1)
     }
 }

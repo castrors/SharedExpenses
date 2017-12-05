@@ -17,4 +17,5 @@ class ExpenseFormViewModel(private val expenseDao: ExpenseDao) : ViewModel() {
     fun deleteExpense(expense: Expense) {
         expenseDao.deleteExpense(expense)
     }
+
 }

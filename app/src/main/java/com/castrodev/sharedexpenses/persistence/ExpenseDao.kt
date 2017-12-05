@@ -5,7 +5,7 @@ import android.arch.persistence.room.OnConflictStrategy.REPLACE
 
 @Dao
 interface ExpenseDao {
-    @Query("SELECT * FROM Expenses")
+    @Query("SELECT * FROM expenses")
     fun getAllExpenses(): List<Expense>
 
     @Insert(onConflict = REPLACE)
