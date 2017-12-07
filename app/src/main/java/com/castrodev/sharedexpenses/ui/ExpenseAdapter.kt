@@ -30,8 +30,8 @@ class ExpenseAdapter(private val expenses: List<Expense>,
 
         fun bindView(expense: Expense) {
             val title = itemView.title
-            val contact = itemView.contact
-            val value = itemView.value
+            val contact = itemView.contact_name
+            val value = itemView.expense_value
 
             title.text = expense.title
             contact.text = expense.contact

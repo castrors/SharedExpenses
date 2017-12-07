@@ -8,4 +8,6 @@
     <string name="house_expenses">Despesas de casa</string>
     <string name="contact">Contato</string>
     <string name="save">Salvar</string>
+    <string name="received">Recebido</string>
+    <string name="check">Visualizar</string>
 </resources>

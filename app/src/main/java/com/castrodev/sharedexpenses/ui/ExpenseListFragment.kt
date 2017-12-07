@@ -5,7 +5,6 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,7 +40,5 @@ class ExpenseListFragment : Fragment() {
 
     private fun subscribeUi(expenseList: RecyclerView, context: Context) {
         expenseList.adapter = ExpenseAdapter(expenses, context)
-        val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        expenseList.layoutManager = layoutManager
     }
 }
