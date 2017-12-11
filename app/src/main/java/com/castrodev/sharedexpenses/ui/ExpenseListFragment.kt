@@ -3,6 +3,7 @@ package com.castrodev.sharedexpenses.ui
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -12,6 +13,8 @@ import com.castrodev.sharedexpenses.Injection
 import com.castrodev.sharedexpenses.R
 import com.castrodev.sharedexpenses.persistence.Expense
 import com.castrodev.sharedexpenses.viewmodel.ExpenseListViewModel
+
+
 
 class ExpenseListFragment : Fragment() {
 
@@ -32,9 +35,26 @@ class ExpenseListFragment : Fragment() {
         val rootView = inflater!!.inflate(R.layout.fragment_expense_list, container, false)
 
         val expenseList = rootView.findViewById<RecyclerView>(R.id.expense_list)
+        val addExpense = rootView.findViewById<FloatingActionButton>(R.id.add_expense)
+        addExpense.setOnClickListener{
+            showExpenseForm()
+        }
+
         subscribeUi(expenseList, context)
 
         return rootView
+    }
+
+    private fun showExpenseForm() {
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragment = fragmentManager.findFragmentByTag("dialog")
+        if (fragment != null) {
+            fragmentTransaction.remove(fragment)
+        }
+        fragmentTransaction.addToBackStack(null)
+
+        val expenseFormFragment = ExpenseFormFragment.newInstance(Expense())
+        expenseFormFragment.show(fragmentTransaction, "dialog")
     }
 
 

@@ -29,9 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             pager?.currentItem = when (item.itemId) {
-                R.id.action_favorites -> 0
-                R.id.action_schedules -> 1
-                R.id.action_music -> 2
+                R.id.action_expenses -> 0
+                R.id.action_history -> 1
                 else -> throw RuntimeException("Unexpected index")
             }
             item.isChecked = true

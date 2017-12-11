@@ -10,13 +10,12 @@ class CustomFragmentStatePagerAdapter(fm: FragmentManager) : FragmentPagerAdapte
         return when (index) {
             0 -> ExpenseListFragment()
             1 -> ExpenseFormFragment()
-            2 -> ExpenseFormFragment()
             else ->
                 throw RuntimeException("Unexpected index")
         }
     }
 
     override fun getCount(): Int {
-        return 3
+        return 2
     }
 }
