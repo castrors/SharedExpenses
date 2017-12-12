@@ -10,4 +10,6 @@
     <string name="save">Salvar</string>
     <string name="received">Recebido</string>
     <string name="check">Visualizar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="add_expense">Adição de despesa</string>
 </resources>

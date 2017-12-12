@@ -12,7 +12,6 @@ import android.widget.Button
 import com.castrodev.sharedexpenses.Injection
 import com.castrodev.sharedexpenses.R
 import com.castrodev.sharedexpenses.persistence.Expense
-import com.castrodev.sharedexpenses.persistence.SharedExpensesDatabase
 import com.castrodev.sharedexpenses.viewmodel.ExpenseFormViewModel
 
 class ExpenseFormFragment : DialogFragment() {
@@ -43,19 +42,16 @@ class ExpenseFormFragment : DialogFragment() {
         titleLayout = rootView.findViewById<TextInputLayout>(R.id.title_layout)
         contactLayout = rootView.findViewById<TextInputLayout>(R.id.contact_layout)
         expensesLayout = rootView.findViewById<TextInputLayout>(R.id.expenses_layout)
-        val clearFormButton = rootView.findViewById<Button>(R.id.clear_form)
-        val saveFormButton = rootView.findViewById<Button>(R.id.save)
+        val cancelAction = rootView.findViewById<Button>(R.id.cancel)
+        val saveAction = rootView.findViewById<Button>(R.id.save)
 
-        saveFormButton.setOnClickListener {
+        saveAction.setOnClickListener {
             saveExpense()
         }
 
-        clearFormButton.setOnClickListener {
-            val database = SharedExpensesDatabase.getInstance(activity)
-            val dao = database.expenseDao()
-            val expenses = dao.getAllExpenses()
+        cancelAction.setOnClickListener {
+            dialog.dismiss()
         }
-
 
         return rootView
     }
