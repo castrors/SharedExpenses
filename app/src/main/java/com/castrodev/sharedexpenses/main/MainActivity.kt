@@ -1,4 +1,4 @@
-package com.castrodev.sharedexpenses.ui
+package com.castrodev.sharedexpenses.main
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView

@@ -1,8 +1,8 @@
 package com.castrodev.sharedexpenses.viewmodel
 
 import android.arch.lifecycle.ViewModel
-import com.castrodev.sharedexpenses.persistence.Expense
-import com.castrodev.sharedexpenses.persistence.ExpenseDao
+import com.castrodev.sharedexpenses.data.Expense
+import com.castrodev.sharedexpenses.data.ExpenseDao
 
 class ExpenseFormViewModel(private val expenseDao: ExpenseDao) : ViewModel() {
 

@@ -1,8 +1,10 @@
-package com.castrodev.sharedexpenses.ui
+package com.castrodev.sharedexpenses.main
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import com.castrodev.sharedexpenses.addeditexpense.ExpenseFormFragment
+import com.castrodev.sharedexpenses.expenses.ExpenseListFragment
 
 class CustomFragmentStatePagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 

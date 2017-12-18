@@ -1,4 +1,4 @@
-package com.castrodev.sharedexpenses.ui
+package com.castrodev.sharedexpenses.addeditexpense
 
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
@@ -11,7 +11,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.castrodev.sharedexpenses.Injection
 import com.castrodev.sharedexpenses.R
-import com.castrodev.sharedexpenses.persistence.Expense
+import com.castrodev.sharedexpenses.main.ViewModelFactory
+import com.castrodev.sharedexpenses.data.Expense
 import com.castrodev.sharedexpenses.viewmodel.ExpenseFormViewModel
 
 class ExpenseFormFragment : DialogFragment() {

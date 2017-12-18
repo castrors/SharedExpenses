@@ -1,4 +1,4 @@
-package com.castrodev.sharedexpenses.persistence
+package com.castrodev.sharedexpenses.data
 
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity

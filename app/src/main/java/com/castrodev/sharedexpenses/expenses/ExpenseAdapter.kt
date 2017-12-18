@@ -1,4 +1,4 @@
-package com.castrodev.sharedexpenses.ui
+package com.castrodev.sharedexpenses.expenses
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.castrodev.sharedexpenses.R
-import com.castrodev.sharedexpenses.persistence.Expense
+import com.castrodev.sharedexpenses.data.Expense
 import kotlinx.android.synthetic.main.expense_item.view.*
 
 class ExpenseAdapter(private val expenses: List<Expense>,

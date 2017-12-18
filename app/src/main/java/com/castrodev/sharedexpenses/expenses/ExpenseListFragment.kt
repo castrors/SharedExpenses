@@ -1,4 +1,4 @@
-package com.castrodev.sharedexpenses.ui
+package com.castrodev.sharedexpenses.expenses
 
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
@@ -11,7 +11,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.castrodev.sharedexpenses.Injection
 import com.castrodev.sharedexpenses.R
-import com.castrodev.sharedexpenses.persistence.Expense
+import com.castrodev.sharedexpenses.data.Expense
+import com.castrodev.sharedexpenses.addeditexpense.ExpenseFormFragment
+import com.castrodev.sharedexpenses.main.ViewModelFactory
 import com.castrodev.sharedexpenses.viewmodel.ExpenseListViewModel
 
 

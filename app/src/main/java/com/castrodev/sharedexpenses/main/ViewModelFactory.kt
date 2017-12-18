@@ -1,8 +1,8 @@
-package com.castrodev.sharedexpenses.ui
+package com.castrodev.sharedexpenses.main
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
-import com.castrodev.sharedexpenses.persistence.ExpenseDao
+import com.castrodev.sharedexpenses.data.ExpenseDao
 import com.castrodev.sharedexpenses.viewmodel.ExpenseFormViewModel
 import com.castrodev.sharedexpenses.viewmodel.ExpenseListViewModel
 

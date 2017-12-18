@@ -1,9 +1,9 @@
 package com.castrodev.sharedexpenses
 
 import android.content.Context
-import com.castrodev.sharedexpenses.persistence.ExpenseDao
-import com.castrodev.sharedexpenses.persistence.SharedExpensesDatabase
-import com.castrodev.sharedexpenses.ui.ViewModelFactory
+import com.castrodev.sharedexpenses.data.ExpenseDao
+import com.castrodev.sharedexpenses.data.SharedExpensesDatabase
+import com.castrodev.sharedexpenses.main.ViewModelFactory
 
 object Injection {
 
