@@ -31,11 +31,11 @@ interface ExpensesContract {
 
         fun loadExpenses(forceUpdate: Boolean)
 
+        fun loadExpenses(forceUpdate: Boolean, showLoadingUI: Boolean)
+
         fun addNewExpense()
 
-        fun openExpenseDetails(requestedExpense: Expense)
-
-        fun completeExpense(completedExpense: Expense)
+        fun openExpenseDetails(openExpenseDetails: Expense)
 
         fun activateExpense(activeExpense: Expense)
 

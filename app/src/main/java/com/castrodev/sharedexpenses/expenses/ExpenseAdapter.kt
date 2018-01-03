@@ -9,8 +9,16 @@ import com.castrodev.sharedexpenses.R
 import com.castrodev.sharedexpenses.data.Expense
 import kotlinx.android.synthetic.main.expense_item.view.*
 
-class ExpenseAdapter(private val expenses: List<Expense>,
-                     private val context: Context) : RecyclerView.Adapter<ExpenseAdapter.ViewHolder>() {
+class ExpenseAdapter(expenses: List<Expense>,
+                     private val context: Context,
+                     private val itemListener: ExpenseListFragment.ExpenseItemListener) : RecyclerView.Adapter<ExpenseAdapter.ViewHolder>() {
+
+    var expenses: List<Expense> = expenses
+        set(expenses) {
+            field = expenses
+            notifyDataSetChanged()
+        }
+
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         val expense = expenses[position]
         holder?.bindView(expense)
